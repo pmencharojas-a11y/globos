@@ -17,8 +17,9 @@ class Globo
 
   void dibujate()
   {
-      ellipse(x,y,50,50);
-      ellipse(x,y,100,20);
+      ellipse(x-30,y,50,50);
+      ellipse(x+30,y,50,50);
+      ellipse(x,y-50,30,100);
   }
   
 }
@@ -34,7 +35,7 @@ void setup()
 
 void draw()
 {
-  background(0);
+  background(255,0,0);
   for(int i=0;i<globos.size();i++)
   {
     globos.get(i).update();
@@ -44,5 +45,5 @@ void draw()
 
 void mousePressed()
 {
-  globos.add(new Globo(mouseX,mouseY));
+  globos.add(new Globo(mouseX-30,mouseY));
 }
